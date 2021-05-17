@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   &__link{
-    @extend %rubik-700;
+    @extend %rubik-500;
     margin-left: 13px;
     font-size: 36px;
     line-height: 58px;
@@ -28,7 +28,7 @@
   margin-left: 146px;
   &__list{
     display: flex;
-    @extend %rubik-700;
+    @extend %rubik-500;
     font-size: 15px;
     line-height: 12px;
   }
