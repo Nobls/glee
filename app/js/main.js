@@ -5,3 +5,5 @@ $('.slider-top__inner').slick({
   autoplay: true,
   autoplaySpeed: 3000
 });
+
+var Mixer = mixitup('.products-gallery__items');
