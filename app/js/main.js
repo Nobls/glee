@@ -6,4 +6,10 @@ $('.slider-top__inner').slick({
   autoplaySpeed: 3000
 });
 
-var Mixer = mixitup('.products-gallery__items');
+var mixer1 = mixitup('.products-gallery__items', {
+
+});
+
+var mixer2 = mixitup('.new-design__items', {
+
+});

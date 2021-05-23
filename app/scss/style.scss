@@ -253,10 +253,10 @@
 }
 
 .products{
-  padding: 74px 0 104px;
+  padding: 64px 0 94px;
 }
 
-.products-gallery{
+.gallery{
   &__title{
     text-align: center;
     margin-bottom: 40px;
@@ -273,7 +273,7 @@
     color: #8b8b8b;
     cursor: pointer;
   }
-  .mixitup-control-active{
+  &__btn.mixitup-control-active{
     color: #1a1a1a;
   }
 }
@@ -418,6 +418,74 @@
       top: 25px;
       background-image: url(../images/icons/arrow-btn.svg);
     }
+  }
+}
+
+.new-design{
+  padding-bottom: 120px;
+  &__block-title{
+    margin-bottom: 24px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 34px;
+  }
+  &__item{
+    max-width: 370px;
+    height: 246px;
+    position: relative;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    border-radius: 5px 5px 0 0;
+    padding-left: 37px;
+    transition: all .3s;
+    &:hover{
+      transform: scale(1.1)
+    }
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $title;
+    margin-top: 37px;
+    margin-bottom: 10px;
+    max-width: 176px;
+  }
+  &__types{
+    display: block;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $bg;
+  }
+  &__image{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+  }
+  &__image--third{
+    position: absolute;
+    right: 56px;
+    bottom: 47px;
+  }
+  &__image--fifth{
+    position: absolute;
+    right: 30px;
+    bottom: 29px;
+  }
+}
+
+.video-popup{
+  padding-bottom: 110px;
+  background-image: url(../images/Clip.jpg);
+  background-repeat: no-repeat;
+  min-height: 500px;
+  &__img{
+    margin: 0 auto;
+    padding: 187px 0;
   }
 }
 
