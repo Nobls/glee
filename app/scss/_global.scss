@@ -30,4 +30,40 @@ body{
   font-size: 36px;
   color: #1a1a1a;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.breadcrumbs{
+  display: inline-flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $bradcrumbs;
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: '/';
+      position: absolute;
+      right: 7px;
+      top: 0;
+      @extend %rubik-400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $bradcrumbs;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
 }

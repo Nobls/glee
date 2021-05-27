@@ -96,6 +96,20 @@
   }
 }
 
+.top{
+  padding: 26px 0 32px;
+  background-color: $bgalpha;
+  text-align: center;
+  &__title{
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 24px;
+    color: $toptitle;
+    margin-bottom: 7px;
+  }
+}
+
+
 .slider-top{
   background-color: $accent;
   background-image: url(../images/slider-bg-img.png);
@@ -619,24 +633,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer-top{
   display: flex;
   border-bottom: 1px solid rgba(163, 187, 200, .4);
@@ -749,6 +745,73 @@
   &__link-line{
     padding-left: 15px;
   }
+}
+
+.modal{
+  max-width: 475px;
+  padding-top: 118px;
+  margin: 0 auto 120px;
+  &__label,
+  &__lostpass,
+  &__problem{
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $headertop;
+  }
+  &__label{
+    margin-bottom: 26px;
+    display: block;
+  }
+  &__input{
+    display: block;
+    max-width: 470px;
+    height: 60px;
+    width: 100%;
+    margin-top: 11px;
+    padding: 0 10px;
+    border: 2px solid #F6F6F6;
+  }
+  &__btn-login{
+    max-width: 470px;
+    height: 60px;
+    width: 100%;
+    border: none;
+    background-color: $bg;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 11px;
+    cursor: pointer;
+    margin-bottom: 33px;
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F6F6F6;
+    margin-bottom: 31px;
+    padding-bottom: 30px;
+  }
+  &__problem{
+    display: block;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  &__btn-create{
+    display: block;
+    max-width: 470px;
+    height: 60px;
+    width: 100%;
+    border: 2px solid $bg;
+    background-color: #fff;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $prodtitle;
+  }
+}
+
+.brands-login{
+  padding: 80px 0 88px;
 }
 
 

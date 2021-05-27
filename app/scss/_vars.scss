@@ -5,6 +5,9 @@ $accent: #fcd7b6;
 $bg: #a3bbc8;
 $title: #1a1a1a;
 $prodtitle: #243f4d;
+$toptitle: #222933;
+$bradcrumbs: rgba(34, 41, 51, .6);
+$bgalpha: rgba(163, 187, 200, .2);
 
 %dmsans-400{
   font-family: 'DMSans-Regular', sans-serif;
@@ -26,6 +29,10 @@ $prodtitle: #243f4d;
   font-weight: 700;
 }
 
+%rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
 %rubik-400{
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
