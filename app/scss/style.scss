@@ -843,6 +843,243 @@
   }
 }
 
+.about-us{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 676px;
+  }
+  &__image{
+    height: 892px;
+    margin-top: -95px;
+  }
+  &__description{
+    padding: 52px 0 93px;
+    max-width: 553px;
+  }
+  &__description-inner{
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+  }
+  &__description-items{
+    margin-left: 24px;
+    margin-top: 20px;
+  }
+  &__num{
+    @extend %rubik-700;
+    font-size: 140px;
+    color: $bg;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $headertop;
+  }
+  &__text-descr{
+    padding-bottom: 63px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 500px;
+      height: 1px;
+      background-color: rgba(9, 49, 111, .1);
+      left: 0;
+      bottom: 0;
+    }
+    margin-bottom: 31px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    color: $prodtitle;
+  }
+  &__title-descr{
+    margin-bottom: 37px;
+  }
+  &__results{
+    display: flex;
+  }
+  &__item{
+    position: relative;
+  }
+  &__item-projects{
+    padding-left: 45px;
+    margin-right: 54px;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 36px;
+      height: 38px;
+      background-image: url(../images/icons/project.svg);
+      left: 0;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 80px;
+      background-color: rgba(9, 49, 111, .1);
+      top: -10px;
+      right: -25px;
+    }
+  }
+  &__item-revenue{
+    padding-left: 60px;
+    margin-right: 61px;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 43px;
+      height: 39px;
+      background-image: url(../images/icons/revenue.svg);
+      left: 0;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 80px;
+      background-color: rgba(9, 49, 111, .1);
+      top: -10px;
+      right: -34px;
+    }
+  }
+  &__item-awards{
+    padding-left: 61px;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 42px;
+      height: 40px;
+      background-image: url(../images/icons/awards.svg);
+      left: 0;
+    }
+  }
+  &__results-text{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 17px;
+    color: #4C4C4C;
+    margin-top: 8px;
+  }
+}
+
+.about-features{
+  background-color: $accent;
+  padding: 88px 0 78px;
+  margin-bottom: 118px;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.team{
+  margin-bottom: 110px;
+  &__inner{
+    display: flex;
+  }
+  &__descr{
+    max-width: 306px;
+    margin-right: 98px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    color: $prodtitle;
+    margin-bottom: 24px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+    margin-bottom: 40px;
+    max-width: 292px;
+  }
+  &__link{
+    @extend %poppins-700;
+    font-size: 15px;
+    line-height: 55px;
+    padding: 15px 60px 14px 17px;
+    background-color: $bg;
+    color: #fff;
+    border-radius: 5px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 11px;
+      background-image: url(../images/icons/link-arrow.svg);
+      right: 26px;
+      top: 20px;
+    }
+  }
+  &__cart{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+  &__item{
+    max-width: 370px;
+    height: 381px;
+  }
+  &__info{
+    max-width: 325px;
+    height: 110px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -49px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, .1);
+  }
+  &__membesr{
+    padding: 24px 0 27px;
+    margin-left: 24px;
+  }
+  &__name{
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 26px;
+    color: $headertop;
+    margin-bottom: 11px;
+  }
+  &__position{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #565872;
+  }
+  &__social{
+    display: flex;
+    padding-top: 37px;
+  }
+  &__social-link--instagram,
+  &__social-link--google{
+    width: 41px;
+    height: 41px;
+    background-color: #F6F6F6;
+    border-radius: 50%;
+  }
+  &__social-link--instagram{
+    padding: 12px;
+    margin-right: 7px;
+  }
+  &__social-link--google{
+    padding: 13px 9px 14px 9px;
+    margin-right: 21px;
+  }
+}
 
 
 
