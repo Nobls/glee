@@ -7,6 +7,7 @@ body{
 body{
   display: flex;
   flex-direction: column;
+  @extend %rubik-400;
 }
 
 .main{
@@ -89,4 +90,40 @@ body{
   &__link{
     color: inherit;
   }
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  padding-top: 108px;
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__link{
+    font-size: 16px;
+    line-height: 100%;
+    padding: 16px 20px;
+    color: $prodtitle;
+    border: 1px solid $bg;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  &__link--active{
+    background-color: $bg;
+    color: #fff;
+  }
+  &__arrow{
+    font-size: 16px;
+    line-height: 100%;
+    color: $prodtitle;
+    padding: 17px 20px;
+    border: 1px solid $bg;
+  }
+}
+
+.pagination-catalog-list{
+  justify-content: start;
+  padding-top: 75px;
 }
