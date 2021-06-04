@@ -304,7 +304,8 @@
   width: 100%;
   height: 380px;
   border-radius: 10px;
-  display: flex;
+  // иначе не работает слайдер
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, .1);
@@ -1378,6 +1379,241 @@
   background-image: url(../images/icons/select-arrow.svg);
 }
 
+.product{
+  padding: 120px 0 110px;
+}
+
+.product-item{
+  margin-bottom: 70px;
+  &__inner{
+    display: flex;
+  }
+  &__slide{
+    width: 550px;
+    margin-right: 66px;
+  }
+  &__content{
+    width: 549px;
+  }
+  &__title{
+    @extend %rubik-400;
+    font-size: 40px;
+    line-height: 100%;
+    margin-bottom: 14px;
+    color: #333333;
+  }
+  &__price{
+    display: block;
+    font-size: 30px;
+    line-height: 45px;
+    color: #333333;
+    margin-top: 32px;
+    margin-bottom: 28px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+    margin-bottom: 28px;
+  }
+  &__btn{
+    font-size: 15px;
+    line-height: 100%;
+    color: #fff;
+    padding: 18px 50px 17px 52px;
+    background-color: $bg;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+  }
+  &__input{
+    padding-left: 49px;
+  }
+}
+
+.jq-number__field{
+  width: 50px;
+  height: 53px;
+  border: 1px solid $bg;
+  border-bottom-color: $bg;
+  border-radius: 0;
+}
+
+.jq-number__field input{
+    width: 100%;
+    padding: 18px 9px;
+    border: none;
+    outline: none;
+    background: none;
+    @extend %rubik-400;
+    text-align: center;
+    color: #333;
+}
+
+.jq-number__spin{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 53px;
+    border: 1px solid $bg;
+    border-bottom-color: $bg;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    user-select: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.jq-number__spin.minus{
+  top: auto;
+  bottom: 0;
+  left: 0;
+}
+.jq-number__spin.plus{
+  right: -13px;
+}
+
+.jq-number__spin.plus::after{
+  content: '+';
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.jq-number__spin.minus::after{
+  content: '-';
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.product-info{
+  margin-top: 55px;
+  &__item{
+    display: flex;
+  }
+  &__title,
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+  }
+  &__link{
+    color: inherit;
+  }
+}
+
+.product-slide{
+  &__thumb{
+    width: 138px;
+    margin-right: 25px;
+    float: left;
+  }
+  &__thumb-item{
+    margin-bottom: 25px;
+    width: 138px;
+    height: 160px;
+    cursor: pointer;
+    img{
+      width: 138px;
+      height: 160px;
+      object-fit: contain;
+    }
+  }
+  &__big{
+    width: 387px;
+    height: 530px;
+    float: left;
+    img{
+      width: 387px;
+      height: 530px;
+      object-fit: contain;
+    }
+  }
+}
+
+.product-tabs{
+  &__top{
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  &__top-item{
+    display: inline-block;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 100%;
+    color: $prodtitle;
+    width: 241px;
+    height: 53px;
+    padding: 16px 0;
+    text-align: center;
+    background-color: $bgalpha;
+    border-radius: 5px;
+  }
+  &__top-item + .product-tabs__top-item{
+    margin-left: 13px;
+  }
+  &__top-item--active{
+    background-color: $bg;
+    color: #fff;
+  }
+  &__content-item{
+    display: none;
+    &.product-tabs__content-item--active{
+      display: block;
+    }
+  }
+  &__content-item{
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+    margin-bottom: 115px;
+  }
+}
+
+.product-slider{
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 43px;
+    color: $prodtitle;
+    margin-bottom: 68px;
+  }
+}
+
+.slick-arrow{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  right: 0;
+  top: -111px;
+  background-color: transparent;
+  border: 1px solid $bg;
+  border-radius: 5px;
+}
+
+.slick-arrow.slick-prev{
+  right: 70px;
+  background-image: url(../images/icons/prev.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $bgalpha;
+}
+
+.slick-arrow.slick-next{
+  background-image: url(../images/icons/next.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 
 
