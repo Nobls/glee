@@ -1728,7 +1728,7 @@
     border: 1px solid $bg;
     border-radius: 5px;
     margin: 0;
-    padding: 0 15px;
+    padding: 0 63px 0 15px;
   }
   &__btn{
     width: 48px;
@@ -1778,6 +1778,130 @@
     }
   }
 }
+
+.blog-details{
+  h3{
+    font-size: 36px;
+    color: #333333;
+    margin: 34px 0;
+  }
+  h5{
+    @extend %rubik-500;
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+    margin-bottom: 20px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+    margin-bottom: 30px;
+  }
+  blockquote{
+    padding: 22px 90px 22px 38px;
+    background-color: $bgalpha;
+    border-left: 6px solid $bg;
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+    margin-bottom: 46px;
+    span{
+      display: block;
+      padding-left: 42px;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        background-image: url(../images/icons/span-line.svg);
+        left: 0;
+        top: 14px;
+      }
+    }
+  }
+  h6{
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 30px;
+    color: $prodtitle;
+    padding: 25px 0 0 0;
+    p{
+      display: block;
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: 22px;
+      color: #565872;
+      margin-bottom: 0;
+    }
+  }
+
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    max-width: 830px;
+    width: 100%;
+  }
+  &__left-img{
+    float: left;
+    margin-right: 31px;
+  }
+  &__right-img{
+    float: right;
+    margin-left: 31px;
+  }
+}
+
+.blog-author{
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  &__inner{
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+  }
+  &__image{
+    margin-right: 28px;
+  }
+  &__name{
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 12px;
+    color: #333333;
+  }
+  &__position{
+    font-size: 16px;
+    line-height: 100%;
+    color: #666666;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media';
