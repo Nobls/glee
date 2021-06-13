@@ -1,0 +1,10 @@
+.video-popup{
+  padding-bottom: 110px;
+  background-image: url(../images/Clip.jpg);
+  background-repeat: no-repeat;
+  min-height: 500px;
+  &__img{
+    margin: 0 auto;
+    padding: 187px 0;
+  }
+}
