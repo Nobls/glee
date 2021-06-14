@@ -115,3 +115,30 @@
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .blog-position {
+    margin-bottom: 0;
+  }
+  .blog-content{
+    &__inner{
+      display: block;
+    }
+    &__item{
+      max-width: 100%;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+    &__link-img{
+      margin-bottom: 5px;
+    }
+    &__link-news{
+      position: unset;
+      margin-bottom: 5px;
+    }
+    &__link-text{
+      max-width: 100%;
+    }
+  }
+}
+

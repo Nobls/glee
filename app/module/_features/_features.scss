@@ -76,3 +76,31 @@
     max-width: 213px;
   }
 }
+
+@media (max-width : 1680px){
+  .features{
+    &__item-support,
+    &__item-delivery{
+      margin-right: 15px;
+      &::before{
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width : 1024px){
+  .features {
+    &__inner{
+      display: block;
+      
+      height: 100%;
+    }
+    &__item{
+      width: 100%;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid $bg;
+    }
+  }
+}

@@ -54,3 +54,42 @@
     bottom: 29px;
   }
 }
+
+@media (max-width: 1366px) {
+  .new-design {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item {
+      max-width: 100%;
+    }
+    &__image--third {
+      left: 115px;
+      bottom: 20px;
+    }
+    &__image--fifth {
+      left: 105px;
+      top: 62px;
+    }
+  }
+}
+
+@media (max-width: 800px){
+  .new-design {
+    padding-bottom: 60px;
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      max-width: 100%;
+    }
+    &__image--third {
+      left: 115px;
+      bottom: 20px;
+    }
+    &__image--fifth {
+      left: 105px;
+      top: 62px;
+    }
+  }
+}
