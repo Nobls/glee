@@ -35,6 +35,10 @@ $(function () {
     $($(this).attr('href')).addClass('product-tabs__content-item--active');
   });
 
+  $('.catalog__filter-btn').on('click', function(){
+    $('.catalog__filters').slideToggle();
+  });
+
   // $('.button-list').on('click', function () {
   //   $('.products-item').addClass('products-item--list');
   // });

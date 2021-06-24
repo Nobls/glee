@@ -1,378 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee</title>
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/catalog-list.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glee</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/catalog-list.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
 
-<body>
+  <body>
 
-  {% include 'app/module/_header/_header.html' %}
+    {% include 'app/module/_header/_header.html' %}
 
-  <main class="main">
-  
-    {% include 'app/module/_top/_top.html' %}
+    <main class="main">
 
-    <section class="catalog">
-      <div class="container">
-        <div class="catalog__inner">
-          <div class="catalog__filters filter">
-            <div class="filter-category">
-              <h4 class="filter__title">
+      {% include 'app/module/_top/_top.html' %}
+
+      <section class="catalog">
+        <div class="container">
+          <div class="catalog__inner">
+          <button class="catalog__filter-btn">Filter</button>
+            <div class="catalog__filters filter">
+              <div class="filter-category">
+                <h4 class="filter__title">
                 CATEGORY
               </h4>
-              <form class="filter-category__form" action="#">
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="checkbox">
-                  <div class="filter-category__checkbox">
-                    <span class="filter-category__name">Chair</span>
-                    <span class="filter-category__icon">></span>
-                  </div>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="checkbox">
-                  <div class="filter-category__checkbox">
-                    <span class="filter-category__name">Table</span>
-                    <span class="filter-category__icon">></span>
-                  </div>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="checkbox">
-                  <div class="filter-category__checkbox">
-                    <span class="filter-category__name">Lamp</span>
-                    <span class="filter-category__icon">></span>
-                  </div>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="checkbox">
-                  <div class="filter-category__checkbox">
-                    <span class="filter-category__name">Watch</span>
-                    <span class="filter-category__icon">></span>
-                  </div>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="checkbox">
-                  <div class="filter-category__checkbox">
-                    <span class="filter-category__name">Clock</span>
-                    <span class="filter-category__icon">></span>
-                  </div>
-                </label>
-              </form>
-            </div>
-
-            <div class="filter-price">
-              <h4 class="filter__title">
-                Price
-              </h4>
-              <form class="filter-price__form" action="#">
-                <input class="filter-price__input" type="text" data-min="0" data-max="600" data-from="100.00"
-                  data-to="500.00">
-                <label class="filter-price__label">
-                  <div class="filter-price__inner">
-                    <div class="filter-price__inner--from">
-                      $<span class="filter-price__from"></span>
+                <form class="filter-category__form" action="#">
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <div class="filter-category__checkbox">
+                      <span class="filter-category__name">Chair</span>
+                      <span class="filter-category__icon">></span>
                     </div>
-                    <div class="filter-price__inner--to">
-                      $<span class="filter-price__to"></span>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <div class="filter-category__checkbox">
+                      <span class="filter-category__name">Table</span>
+                      <span class="filter-category__icon">></span>
                     </div>
-                  </div>
-                </label>
-              </form>
-            </div>
-
-            <div class="filter-brand">
-              <h4 class="filter__title">
-                Brand
-              </h4>
-              <form class="filter-brand__form" action="#">
-                <label class="filter-brand__label">
-                  <input class="filter-brand__input" type="checkbox">
-                  <div class="filter-brand__checkbox">
-                    <span class="filter-brand__name">RFL</span>
-                    <span class="filter-brand__icon">(10)</span>
-                  </div>
-                </label>
-                <label class="filter-brand__label">
-                  <input class="filter-brand__input" type="checkbox">
-                  <div class="filter-brand__checkbox">
-                    <span class="filter-brand__name">Brothers</span>
-                    <span class="filter-brand__icon">(21)</span>
-                  </div>
-                </label>
-                <label class="filter-brand__label">
-                  <input class="filter-brand__input" type="checkbox">
-                  <div class="filter-brand__checkbox">
-                    <span class="filter-brand__name">Regal</span>
-                    <span class="filter-brand__icon">(3)</span>
-                  </div>
-                </label>
-                <label class="filter-brand__label">
-                  <input class="filter-brand__input" type="checkbox">
-                  <div class="filter-brand__checkbox">
-                    <span class="filter-brand__name">Nadia</span>
-                    <span class="filter-brand__icon">(14)</span>
-                  </div>
-                </label>
-                <label class="filter-brand__label">
-                  <input class="filter-brand__input" type="checkbox">
-                  <div class="filter-brand__checkbox">
-                    <span class="filter-brand__name">Otobi</span>
-                    <span class="filter-brand__icon">(6)</span>
-                  </div>
-                </label>
-              </form>
-            </div>
-
-            <div class="filter-recent">
-              <h4 class="filter__title">
-                RECENT PRODUCTS
-              </h4>
-              <div class="filter-recent__item">
-                <div class="filter-recent__inner">
-                  <a class="filter-recent__link" href="#">
-                    <img src="images/filter/1.png" alt="lamp image" class="filter-recent__image">
-                  </a>
-                  <div class="filter-recent__content">
-                    <a class="filter-recent__link-titel" href="#">
-                      <h5 class="filter-recent__title">
-                        Pendant lamp
-                      </h5>
-                    </a>
-                    <div class="star"></div>
-                    <span class="filter-recent__price">
-                      23$
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-recent__item">
-                <div class="filter-recent__inner">
-                  <a class="filter-recent__link" href="#">
-                    <img src="images/filter/2.png" alt="lamp image" class="filter-recent__image">
-                  </a>
-                  <div class="filter-recent__content">
-                    <a class="filter-recent__link-titel" href="#">
-                      <h5 class="filter-recent__title">
-                        Pendant lamp
-                      </h5>
-                    </a>
-                    <div class="star"></div>
-                    <span class="filter-recent__price">
-                      23$
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-recent__item">
-                <div class="filter-recent__inner">
-                  <a class="filter-recent__link" href="#">
-                    <img src="images/filter/3.png" alt="lamp image" class="filter-recent__image">
-                  </a>
-                  <div class="filter-recent__content">
-                    <a class="filter-recent__link-titel" href="#">
-                      <h5 class="filter-recent__title">
-                        Pendant lamp
-                      </h5>
-                    </a>
-                    <div class="star"></div>
-                    <span class="filter-recent__price">
-                      23$
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="catalog-content">
-            <div class="catalog-content__filter">
-              <div class="catalog-content__filter-buttons">
-                <a class="catalog-content__filter-btn" href="catalog.html">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-                    <path
-                      d="M855,613.75h3.75V610H855ZM860.625,625h3.75v-3.75h-3.75ZM855,625h3.75v-3.75H855Zm0-5.625h3.75v-3.75H855Zm5.625,0h3.75v-3.75h-3.75ZM866.25,610v3.75H870V610Zm-5.625,3.75h3.75V610h-3.75Zm5.625,5.625H870v-3.75h-3.75Zm0,5.625H870v-3.75h-3.75Z"
-                      transform="translate(-855 -610)" fill="#a3bbc8" />
-                  </svg>
-                </a>
-                <a class="catalog-content__filter-btn catalog-content__filter-btn--active" href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15">
-                    <path
-                      d="M890.83,625v-4.17h14.16V625Zm-5.82,0v-4.17h4.421V625Zm5.82-5.42v-4.17h14.16v4.17Zm-5.82,0v-4.17h4.421v4.17Zm5.82-5.41V610h14.16v4.17Zm-5.82,0V610h4.421v4.17Z"
-                      transform="translate(-885.01 -610)" fill="#a3bbc8" />
-                  </svg>
-                </a>
-              </div>
-              <div class="catalog-content__filter-selects">
-                <form class="catalog-content__filter-form" action="#">
-                  <select class="catalog-content__filter-sort select-style">
-                    <option value="">Sort By Default</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                  </select>
-                  <select class="catalog-content__filter-show select-style">
-                    <option value="">Show 9</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                  </select>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <div class="filter-category__checkbox">
+                      <span class="filter-category__name">Lamp</span>
+                      <span class="filter-category__icon">></span>
+                    </div>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <div class="filter-category__checkbox">
+                      <span class="filter-category__name">Watch</span>
+                      <span class="filter-category__icon">></span>
+                    </div>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <div class="filter-category__checkbox">
+                      <span class="filter-category__name">Clock</span>
+                      <span class="filter-category__icon">></span>
+                    </div>
+                  </label>
                 </form>
               </div>
-            </div>
-            <div class="catalog-content__inner">
-              <div class="catalog-content__item">
-                <div class="catalog-content__inner-img">
-                  <img class="catalog-content__img" src="images/content/catalog-1.jpg" alt="catalog image">
+
+              <div class="filter-price">
+                <h4 class="filter__title">
+                Price
+              </h4>
+                <form class="filter-price__form" action="#">
+                  <input class="filter-price__input" type="text" data-min="0" data-max="600" data-from="100.00"
+                  data-to="500.00">
+                  <label class="filter-price__label">
+                    <div class="filter-price__inner">
+                      <div class="filter-price__inner--from">
+                      $<span class="filter-price__from"></span>
+                      </div>
+                      <div class="filter-price__inner--to">
+                      $<span class="filter-price__to"></span>
+                      </div>
+                    </div>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter-brand">
+                <h4 class="filter__title">
+                Brand
+              </h4>
+                <form class="filter-brand__form" action="#">
+                  <label class="filter-brand__label">
+                    <input class="filter-brand__input" type="checkbox">
+                    <div class="filter-brand__checkbox">
+                      <span class="filter-brand__name">RFL</span>
+                      <span class="filter-brand__icon">(10)</span>
+                    </div>
+                  </label>
+                  <label class="filter-brand__label">
+                    <input class="filter-brand__input" type="checkbox">
+                    <div class="filter-brand__checkbox">
+                      <span class="filter-brand__name">Brothers</span>
+                      <span class="filter-brand__icon">(21)</span>
+                    </div>
+                  </label>
+                  <label class="filter-brand__label">
+                    <input class="filter-brand__input" type="checkbox">
+                    <div class="filter-brand__checkbox">
+                      <span class="filter-brand__name">Regal</span>
+                      <span class="filter-brand__icon">(3)</span>
+                    </div>
+                  </label>
+                  <label class="filter-brand__label">
+                    <input class="filter-brand__input" type="checkbox">
+                    <div class="filter-brand__checkbox">
+                      <span class="filter-brand__name">Nadia</span>
+                      <span class="filter-brand__icon">(14)</span>
+                    </div>
+                  </label>
+                  <label class="filter-brand__label">
+                    <input class="filter-brand__input" type="checkbox">
+                    <div class="filter-brand__checkbox">
+                      <span class="filter-brand__name">Otobi</span>
+                      <span class="filter-brand__icon">(6)</span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter-recent">
+                <h4 class="filter__title">
+                RECENT PRODUCTS
+              </h4>
+                <div class="filter-recent__item">
+                  <div class="filter-recent__inner">
+                    <a class="filter-recent__link" href="#">
+                      <img src="images/filter/1.png" alt="lamp image" class="filter-recent__image">
+                    </a>
+                    <div class="filter-recent__content">
+                      <a class="filter-recent__link-titel" href="#">
+                        <h5 class="filter-recent__title">
+                        Pendant lamp
+                      </h5>
+                      </a>
+                      <div class="star"></div>
+                      <span class="filter-recent__price">
+                      23$
+                    </span>
+                    </div>
+                  </div>
                 </div>
-                <div class="catalog-content__info">
-                  <h3 class="catalog-content__title">
+                <div class="filter-recent__item">
+                  <div class="filter-recent__inner">
+                    <a class="filter-recent__link" href="#">
+                      <img src="images/filter/2.png" alt="lamp image" class="filter-recent__image">
+                    </a>
+                    <div class="filter-recent__content">
+                      <a class="filter-recent__link-titel" href="#">
+                        <h5 class="filter-recent__title">
+                        Pendant lamp
+                      </h5>
+                      </a>
+                      <div class="star"></div>
+                      <span class="filter-recent__price">
+                      23$
+                    </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-recent__item">
+                  <div class="filter-recent__inner">
+                    <a class="filter-recent__link" href="#">
+                      <img src="images/filter/3.png" alt="lamp image" class="filter-recent__image">
+                    </a>
+                    <div class="filter-recent__content">
+                      <a class="filter-recent__link-titel" href="#">
+                        <h5 class="filter-recent__title">
+                        Pendant lamp
+                      </h5>
+                      </a>
+                      <div class="star"></div>
+                      <span class="filter-recent__price">
+                      23$
+                    </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="catalog-content">
+              <div class="catalog-content__filter">
+                <div class="catalog-content__filter-buttons">
+                  <a class="catalog-content__filter-btn" href="catalog.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                      <path
+                      d="M855,613.75h3.75V610H855ZM860.625,625h3.75v-3.75h-3.75ZM855,625h3.75v-3.75H855Zm0-5.625h3.75v-3.75H855Zm5.625,0h3.75v-3.75h-3.75ZM866.25,610v3.75H870V610Zm-5.625,3.75h3.75V610h-3.75Zm5.625,5.625H870v-3.75h-3.75Zm0,5.625H870v-3.75h-3.75Z"
+                      transform="translate(-855 -610)" fill="#a3bbc8"/>
+                    </svg>
+                  </a>
+                  <a class="catalog-content__filter-btn catalog-content__filter-btn--active" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15">
+                      <path
+                      d="M890.83,625v-4.17h14.16V625Zm-5.82,0v-4.17h4.421V625Zm5.82-5.42v-4.17h14.16v4.17Zm-5.82,0v-4.17h4.421v4.17Zm5.82-5.41V610h14.16v4.17Zm-5.82,0V610h4.421v4.17Z"
+                      transform="translate(-885.01 -610)" fill="#a3bbc8"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="catalog-content__filter-selects">
+                  <form class="catalog-content__filter-form" action="#">
+                    <select class="catalog-content__filter-sort select-style">
+                      <option value="">Sort By Default</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                    </select>
+                    <select class="catalog-content__filter-show select-style">
+                      <option value="">Show 9</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+              <div class="catalog-content__inner">
+                <div class="catalog-content__item">
+                  <div class="catalog-content__inner-img">
+                    <img class="catalog-content__img" src="images/content/catalog-1.jpg" alt="catalog image">
+                  </div>
+                  <div class="catalog-content__info">
+                    <h3 class="catalog-content__title">
                     Wooden radio
                   </h3>
-                  <div class="catalog-star"></div>
-                  <span class="catalog-content__price">
+                    <div class="catalog-star"></div>
+                    <span class="catalog-content__price">
                     23$
                   </span>
-                  <p class="catalog-content__text">
+                    <p class="catalog-content__text">
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim
                     veniam, quis nostrud exercitation
                   </p>
-                  <button class="catalog-content__btn" type="submit">
+                    <button class="catalog-content__btn" type="submit">
                     ADD TO CART
                   </button>
+                  </div>
                 </div>
-              </div>
-              <div class="catalog-content__item">
-                <div class="catalog-content__inner-img">
-                  <img class="catalog-content__img" src="images/content/catalog-2.jpg" alt="catalog image">
-                </div>
-                <div class="catalog-content__info">
-                  <h3 class="catalog-content__title">
+                <div class="catalog-content__item">
+                  <div class="catalog-content__inner-img">
+                    <img class="catalog-content__img" src="images/content/catalog-2.jpg" alt="catalog image">
+                  </div>
+                  <div class="catalog-content__info">
+                    <h3 class="catalog-content__title">
                     Wooden radio
                   </h3>
-                  <div class="catalog-star"></div>
-                  <span class="catalog-content__price">
+                    <div class="catalog-star"></div>
+                    <span class="catalog-content__price">
                     23$
                   </span>
-                  <p class="catalog-content__text">
+                    <p class="catalog-content__text">
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim
                     veniam, quis nostrud exercitation
                   </p>
-                  <div class="catalog-content__buttons">
-                    <button class="catalog-content__btn-cart" type="submit">
-                      <img class="catalog-content__btn-img" src="images/icons/btn-cart.svg" alt="button image">
-                    </button>
-                    <button class="catalog-content__btn-heart" type="submit">
-                      <img class="catalog-content__btn-img" src="images/icons/btn-heart.svg" alt="button image">
-                    </button>
+                    <div class="catalog-content__buttons">
+                      <button class="catalog-content__btn-cart" type="submit">
+                        <img class="catalog-content__btn-img" src="images/icons/btn-cart.svg" alt="button image">
+                      </button>
+                      <button class="catalog-content__btn-heart" type="submit">
+                        <img class="catalog-content__btn-img" src="images/icons/btn-heart.svg" alt="button image">
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="catalog-content__item">
-                <div class="catalog-content__inner-img">
-                  <img class="catalog-content__img" src="images/content/catalog-3.jpg" alt="catalog image">
-                </div>
-                <div class="catalog-content__info">
-                  <h3 class="catalog-content__title">
+                <div class="catalog-content__item">
+                  <div class="catalog-content__inner-img">
+                    <img class="catalog-content__img" src="images/content/catalog-3.jpg" alt="catalog image">
+                  </div>
+                  <div class="catalog-content__info">
+                    <h3 class="catalog-content__title">
                     Wooden radio
                   </h3>
-                  <div class="catalog-star"></div>
-                  <span class="catalog-content__price">
+                    <div class="catalog-star"></div>
+                    <span class="catalog-content__price">
                     23$
                   </span>
-                  <p class="catalog-content__text">
+                    <p class="catalog-content__text">
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim
                     veniam, quis nostrud exercitation
                   </p>
-                  <div class="catalog-content__buttons">
-                    <button class="catalog-content__btn-cart" type="submit">
-                      <img class="catalog-content__btn-img" src="images/icons/btn-cart.svg" alt="button image">
-                    </button>
-                    <button class="catalog-content__btn-heart" type="submit">
-                      <img class="catalog-content__btn-img" src="images/icons/btn-heart.svg" alt="button image">
-                    </button>
+                    <div class="catalog-content__buttons">
+                      <button class="catalog-content__btn-cart" type="submit">
+                        <img class="catalog-content__btn-img" src="images/icons/btn-cart.svg" alt="button image">
+                      </button>
+                      <button class="catalog-content__btn-heart" type="submit">
+                        <img class="catalog-content__btn-img" src="images/icons/btn-heart.svg" alt="button image">
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="catalog-content__item">
-                <div class="catalog-content__inner-img">
-                  <img class="catalog-content__img" src="images/content/catalog-4.jpg" alt="catalog image">
-                </div>
-                <div class="catalog-content__info">
-                  <h3 class="catalog-content__title">
+                <div class="catalog-content__item">
+                  <div class="catalog-content__inner-img">
+                    <img class="catalog-content__img" src="images/content/catalog-4.jpg" alt="catalog image">
+                  </div>
+                  <div class="catalog-content__info">
+                    <h3 class="catalog-content__title">
                     Wooden radio
                   </h3>
-                  <div class="catalog-star"></div>
-                  <span class="catalog-content__price">
+                    <div class="catalog-star"></div>
+                    <span class="catalog-content__price">
                     23$
                   </span>
-                  <p class="catalog-content__text">
+                    <p class="catalog-content__text">
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim
                     veniam, quis nostrud exercitation
                   </p>
-                  <div class="catalog-content__buttons">
-                    <button class="catalog-content__btn-cart" type="submit">
-                      <img class="catalog-content__btn-img" src="images/icons/btn-cart.svg" alt="button image">
-                    </button>
-                    <button class="catalog-content__btn-heart" type="submit">
-                      <img class="catalog-content__btn-img" src="images/icons/btn-heart.svg" alt="button image">
-                    </button>
+                    <div class="catalog-content__buttons">
+                      <button class="catalog-content__btn-cart" type="submit">
+                        <img class="catalog-content__btn-img" src="images/icons/btn-cart.svg" alt="button image">
+                      </button>
+                      <button class="catalog-content__btn-heart" type="submit">
+                        <img class="catalog-content__btn-img" src="images/icons/btn-heart.svg" alt="button image">
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
+              <div class="pagination pagination-catalog-list">
+                <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--active" href="#">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">3</a>
+                  </li>
+                </ul>
+                <a class="pagination__arrow pagination__next" href="#">Next</a>
+              </div>
             </div>
-            <div class="pagination pagination-catalog-list">
-              <ul class="pagination__list">
-                <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-              </ul>
-              <a class="pagination__arrow pagination__next" href="#">Next</a>
-            </div>
-          </div>
 
-        </div>
-      </div>
-    </section>
-
-        <div class="brands brands-login">
-          <div class="container">
-            <ul class="brands__list">
-              <li class="brands__item">
-                <img class="brands__images" src="images/content/brand-1.png" alt="brands image">
-              </li>
-              <li class="brands__item">
-                <img class="brands__images" src="images/content/brand-2.png" alt="brands image">
-              </li>
-              <li class="brands__item">
-                <img class="brands__images" src="images/content/brand-3.png" alt="brands image">
-              </li>
-              <li class="brands__item">
-                <img class="brands__images" src="images/content/brand-4.png" alt="brands image">
-              </li>
-              <li class="brands__item">
-                <img class="brands__images" src="images/content/brand-5.png" alt="brands image">
-              </li>
-            </ul>
           </div>
         </div>
+      </section>
 
-  </main>
+      {% include 'app/module/_brands-login/_brands-login.html' %}
 
-  {% include 'app/module/_footer/_footer.html' %}
+    </main>
 
-  <script src="js/main.min.js"></script>
-</body>
+    {% include 'app/module/_footer/_footer.html' %}
+
+    <script src="js/main.min.js"></script>
+  </body>
 
 </html>
