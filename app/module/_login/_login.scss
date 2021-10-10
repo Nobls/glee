@@ -1,0 +1,63 @@
+.modal {
+  max-width: 475px;
+  padding-top: 118px;
+  margin: 0 auto 120px;
+  &__label,
+  &__lostpass,
+  &__problem {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $headertop;
+  }
+  &__label {
+    margin-bottom: 26px;
+    display: block;
+  }
+  &__input {
+    display: block;
+    max-width: 470px;
+    height: 60px;
+    width: 100%;
+    margin-top: 11px;
+    padding: 0 10px;
+    border: 2px solid #f6f6f6;
+  }
+  &__btn-login {
+    max-width: 470px;
+    height: 60px;
+    width: 100%;
+    border: none;
+    background-color: $bg;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 11px;
+    cursor: pointer;
+    margin-bottom: 33px;
+  }
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f6f6f6;
+    margin-bottom: 31px;
+    padding-bottom: 30px;
+    align-items: center;
+  }
+  &__problem {
+    display: block;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  &__btn-create {
+    display: block;
+    max-width: 470px;
+    height: 60px;
+    width: 100%;
+    border: 2px solid $bg;
+    background-color: #fff;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $prodtitle;
+  }
+}

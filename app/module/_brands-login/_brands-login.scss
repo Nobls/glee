@@ -1,0 +1,23 @@
+.brands-login {
+  background-color: rgba(252, 215, 182, 0.2);
+  padding: 80px 0 88px;
+  margin-bottom: 78px;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .brands-login {
+    padding: 50px 0;
+    &__list {
+      flex-direction: column;
+    }
+    &__item + .brands__item {
+      margin-top: 30px;
+    }
+  }
+}
+

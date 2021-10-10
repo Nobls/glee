@@ -1,0 +1,64 @@
+$headertop: #436372;
+$footertitle: #1f2044;
+$footertext: #7b7b7b;
+$accent: #fcd7b6;
+$bg: #a3bbc8;
+$title: #1a1a1a;
+$prodtitle: #243f4d;
+$toptitle: #222933;
+$bradcrumbs: rgba(34, 41, 51, .6);
+$bgalpha: rgba(163, 187, 200, .2);
+
+%dmsans-400{
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%dmsans-500{
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dmsans-700{
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%poppins-700{
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+%rubik-400{
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500{
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+%rubik-700{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

@@ -1,0 +1,136 @@
+.slider-top {
+  background-color: $accent;
+  background-image: url(../images/slider-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: 85% 45%;
+  &__item {
+    padding: 225px 0 207px;
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 411px;
+  }
+  &__title {
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    margin-bottom: 45px;
+  }
+  &__text {
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #436372;
+    margin-bottom: 41px;
+  }
+  &__link {
+    @extend %rubik-500;
+    font-size: 14px;
+    line-height: 12px;
+    color: #ffffff;
+    width: 200px;
+    padding: 25px 101px 21px 27px;
+    background-color: $bg;
+    display: block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 19px;
+      width: 22px;
+      height: 9px;
+      background-image: url(../images/btn-arrow.svg);
+    }
+  }
+  &__image {
+    height: 264px;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 45px;
+    li {
+      padding: 0 5px;
+      opacity: 0.3;
+      button {
+        width: 30px;
+        height: 29px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: none;
+        @extend %rubik-500;
+        font-size: 11px;
+        line-height: 8.7px;
+        color: #243f4d;
+        padding: 12px 14px 10px 12px;
+      }
+      &.slick-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .slider-top {
+    background-image: none;
+    &__image {
+      width: 55%;
+      object-fit: contain;
+    }
+    &__item {
+      padding: 100px 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider-top {
+    &__item{
+      .slider-top__image{
+        display: none;
+      }
+    }
+    &__content{
+      margin-right: 15px;
+    }
+    &__title {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    .slick-dots{
+      padding-bottom: 15px;
+    }
+    &__item {
+      padding: 100px 0;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .slider-top {
+    &__item {
+      padding: 50px 0;
+    }
+    &__title {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 360px){
+  .slider-top {
+    &__title {
+      font-size: 35px;
+      line-height: 50px;
+      margin-bottom: 10px;
+    }
+    &__text{
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.blog {
+  position: relative;
+  z-index: 2;
+}
+
+.blog-position {
+  margin-bottom: -170px;
+}
+
+.blog-top {
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    text-align: left;
+    margin-bottom: 43px;
+  }
+  &__link {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #262626;
+    padding-top: 20px;
+    padding-right: 25px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 11px;
+      background-image: url(../images/icons/view-arrow.svg);
+      right: 0;
+      top: 24px;
+    }
+  }
+}
+
+.blog-content {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+  &__item {
+    max-width: 370px;
+    height: 420px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.1);
+    background-color: #fff;
+  }
+  &__link-img {
+    display: block;
+    margin-bottom: 31px;
+  }
+  &__link-news {
+    display: block;
+    padding: 5px 31px;
+    background-color: $bg;
+    border-radius: 15px;
+    max-width: 103px;
+    @extend %poppins-700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    position: absolute;
+    bottom: 157px;
+    left: 28px;
+  }
+  &__link-text {
+    display: block;
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #262626;
+    max-width: 315px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-left: 31px;
+  }
+  &__aside {
+    margin-top: 19px;
+  }
+  &__date,
+  &__author {
+    @extend %rubik-400;
+    font-size: 12px;
+    line-height: 30px;
+    color: #222933;
+    padding-left: 25px;
+  }
+  &__date {
+    margin-left: 35px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/date.svg);
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: -4px;
+    }
+  }
+  &__author {
+    margin-left: 29px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/persona.svg);
+      width: 20px;
+      height: 20px;
+      left: 0px;
+      top: -8px;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .blog-position {
+    margin-bottom: 0;
+  }
+  .blog-content{
+    &__inner{
+      display: block;
+    }
+    &__item{
+      max-width: 100%;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+    &__link-img{
+      margin-bottom: 5px;
+    }
+    &__link-news{
+      position: unset;
+      margin-bottom: 5px;
+    }
+    &__link-text{
+      max-width: 100%;
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+.terms{
+  padding: 98px 0 67px;
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    color: $prodtitle;
+    margin-bottom: 23px;
+    &:first-child{
+      margin-bottom: 29px;
+    }
+    &:nth-child(2){
+      margin-bottom: 20px;
+    }
+  }
+  &__list{
+    list-style-type:decimal-leading-zero;
+    margin-left: 33px;
+  }
+  &__item,
+  &__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $prodtitle;
+    padding-bottom: 23px;
+  }
+}
+
+@media (max-width: 800px){
+  .terms{
+    padding: 50px 0;
+  }
+}
