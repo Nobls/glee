@@ -44,6 +44,7 @@
   overflow: hidden;
   &__img-box {
     margin: auto 0;
+    cursor: pointer;
   }
   &__images {
     object-fit: cover;
